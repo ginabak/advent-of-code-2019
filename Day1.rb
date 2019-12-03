@@ -12,12 +12,13 @@ def main
       num = line.to_i
       value =(num.div(3)).floor()
       value -= 2
-      return value
+      array << value
     end
+    return array
   end
   #test
   calculated_num = calculate_file.call(file)
-  puts calculated_num
+  puts calculated_num.inject(:+)
 end
   
 
