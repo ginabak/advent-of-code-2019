@@ -1,4 +1,3 @@
-# open file
 def main
   
   total_num = 0 
@@ -8,6 +7,7 @@ def main
   # must be a lambda since a value is returned! 
   # take mass divide by three round down (floor) and subtract by 2
   calculate_file = lambda do |file|
+    #block to append each value to array
     file.each do |line|
       num = line.to_i
       value =(num.div(3)).floor()
@@ -21,17 +21,6 @@ def main
   puts calculated_num.inject(:+)
 end
   
-
-  # Must use a lamdba since I need to return a value
-  # file.each do |line|
-  #   num = line.to_i
-  #   value = (num.div(3)).floor()
-  #   value -= 2
-  #   puts value
-  #   total_num += value
-  #   puts total_num
-  # end
-
 main
 
 
